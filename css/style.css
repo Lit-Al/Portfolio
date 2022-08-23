@@ -1,0 +1,262 @@
+/* Variables */
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  src:
+    url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 800;
+  src:
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: var(--basic-black);
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--basic-background-body-color);
+}
+
+button {
+  cursor: pointer;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0px 5px 15px #6c62cab7;
+  background-color: var(--basic-white);
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* Main */
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #6c62cab7;
+}
+
+.header__title {
+  margin: 0;
+  color: #473e96;
+  line-height: 1em;
+}
+
+.header__title span {
+  font-size: 26px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.welcome__text {
+  width: 45%;
+}
+
+.header__list p {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* .header__list {
+  margin-right: 100px;
+} */
+
+.header__list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__list li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.header__list li::before {
+  content: "";
+  background-color: #0e0466;
+  display: block;
+  width: 15px;
+  height: 2px;
+  margin-right: 8px;
+}
+
+/* Main */
+
+.main {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.main__title {
+  margin: 10px auto;
+  color: #473e96;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 370px;
+  margin-bottom: 50px;
+}
+
+.main__title::after,
+.main__title::before {
+  content: "";
+  background-color: #0e0466;
+  display: block;
+  width: 35px;
+  height: 2px;
+}
+
+.main__cards {
+  display: flex;
+  gap: 40px 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 10px;
+  border: 2px solid #6c62cab7;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  transition: all .1s ease;
+}
+
+.card:hover,
+.card:hover {
+  box-shadow: 0px 5px 15px #6c62cab7;
+  transform: scale(1.03);
+}
+
+.card:active {
+  transform: scale(1);
+}
+
+.card a{
+  text-decoration: none;
+  color: #0e0466;
+  font-size: 18px;
+}
+
+.card a:hover,
+.card a:focus{
+  text-decoration: underline;
+}
+
+
+.card h3{
+  color: #000000;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.main__card img{
+  background-size: cover;
+  object-fit: fill;
+  width: 500px;
+  height: 300px;
+  background-color: #6c62cab7;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #6c62cab7;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.social-network-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 81px;
+  height: 81px;
+  background-color: #9aa4df;
+  transition: all .2s ease;
+}
+
+.social-network-item:hover,
+.social-network-item:focus {
+  background-color: #6c62ca;
+}
+
+.social-network-item:active {
+  background-color: #0e0466bd;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.social-network-item:active img{
+  opacity: .3;
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    width: 600px;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .welcome__text {
+    width: fit-content;
+  }
+  .header__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
